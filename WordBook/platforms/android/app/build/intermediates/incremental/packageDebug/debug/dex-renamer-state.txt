@@ -1,0 +1,4 @@
+#Sun Feb 03 11:31:01 GST 2019
+base.0=D\:\\201820\\CIA-3403\\project1\\WordBook\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex
