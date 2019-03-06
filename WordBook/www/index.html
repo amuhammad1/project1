@@ -5,57 +5,66 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <title>Word Book</title>
+        <title>ADD WORD</title>
     </head>
+
     <body>
-		
-        <div id="add_word" data-role="page" class="custom-background">
+        <div id="add_word" data-role="page" class="custom-background" style="font-size: 13px">
+            
+    <div style="display: flex; justify-content: center;">
+    <img src="img/logo.png" style="width: 180px; height: 150px;" />
+    </div>
 
           <div data-role="header" data-position="fixed" class="custom-header" >
-            <h3>Add Word</h3>
+            <h3>ADD WORD</h3>
           </div>
             
-          <div role="main" class="ui-content " style="background-color:#f9f9f9;color:#fff">
-            <form>
+          <div role="main" class="ui-content " style="background-color:#f5f5f5;color:#43515a">
+            
                 <div class="ui-field-contain">
-                    <label for="word" class="custom-label">Word:</label>
+                    <label for="word" class="custom-label" style="font-size: 13px">Word:</label>
                     <input type="text" name="word" id="word" value="">
                 </div>
                 <div class="ui-field-contain">
-                    <label for="part_of_speech" class="custom-label">Part of Speech:</label>
-                    <select name="part_of_speech" id="part_of_speech">
-                        <option value="Noun">Noun</option>
+                    <label for="part_of_speech" class="custom-label" style="font-size: 13px">Part of Speech:</label>
+                    <select name="part_of_speech" id="part_of_speech" style="font-size: 10px" >
+                        <option value="Noun" >Noun</option>
+                        <option value="Noun">Pronoun</option>
                         <option value="Verb">Verb</option>
-                        <option value="Adjective">Adjective</option>
                         <option value="Adverb">Adverb</option>
+                        <option value="Adjective">Adjective</option>
+                        <option value="Adjective">Preposition</option>
+                        <option value="Adjective">Conjunction</option>
+                        <option value="Adjective">Interjection</option>
+                        
+                    
                     </select>
                 </div>                
                 <div class="ui-field-contain">
-                    <label for="meaning" class="custom-label">Meaning:</label>
+                    <label for="meaning" class="custom-label" style="font-size: 13px">Meaning:</label>
                     <input type="text" name="meaning" id="meaning" value="">
                 </div>
                 <div class="ui-field-contain">
-                    <label for="usage" class="custom-label">Sentence:</label>
+                    <label for="usage" class="custom-label" style="font-size: 13px">Sentence:</label>
                     <textarea cols="40" rows="8" name="usage" id="usage"></textarea>
                 </div>
-                <div class="ui-field-contain">
-                    <button id="save_button" class="ui-btn ui-btn-inline">Save</button>
+                <div class="ui-field-contain" style="display: flex; justify-content: center;">
+                    <button id="save_button" class="ui-btn ui-btn-inline" style="font-size: 13px">Save</button>
                 </div>
-            </form>
+            
           </div>
             
           <div data-position="fixed" data-role="footer">
             <div data-role="navbar">
               <ul>
                 <li>
-                  <a href="#add_word" class="custom-header" data-transition="slide"><img src="img/logo.png" height="30" width="30"><br>Add</a>
+                  <a href="#add_word" class="custom-header" data-transition="slide"><img src="img/add.png" height="30" width="30"><br>Add</a>
                 </li>
                 <li>
-                  <a href="#list_words" class="custom-header" data-transition="slide"><img src="img/logo.png" height="30" width="30"><br>List</a>
+                  <a href="#list_words" class="custom-header" data-transition="slide"><img src="img/list.png" height="30" width="30"><br>List</a>
                 </li>
               </ul>
             </div>
@@ -70,13 +79,13 @@
             <button id="refresh_words" class="ui-btn-right ui-btn ui-btn-a ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check custom-header">Refresh</button>
           </div>
             
-          <div role="main" class="ui-content " style="background-color:#f9f9f9;color:#fff">
+          <div role="main" class="ui-content " style="background-color:#f5f5f5;color:#43515a">
             <ul data-role="listview" id="word_list">
-                <li><a href="#">Think</a></li>
+                <!--li><a href="#">Think</a></li>
                 <li><a href="#deem">Deem</a></li>
                 <li><a href="#">Reckon</a></li>
                 <li><a href="#">Conference</a></li>
-                <li><a href="#">Seminar</a></li>
+                <li><a href="#">Seminar</a></li-->
             </ul>			
           </div>
          
@@ -84,10 +93,10 @@
             <div data-role="navbar">
               <ul>
                 <li>
-                  <a href="#add_word" class="custom-header" data-transition="slide"><img src="img/logo.png" height="30" width="30"><br>Add</a>
+                  <a href="#add_word" class="custom-header" data-transition="slide"><img src="img/add.png" height="30" width="30"><br>Add</a>
                 </li>
                 <li>
-                  <a href="#list_words" class="custom-header" data-transition="slide"><img src="img/logo.png" height="30" width="30"><br>List</a>
+                  <a href="#list_words" class="custom-header" data-transition="slide"><img src="img/list.png" height="30" width="30"><br>List</a>
                 </li>
               </ul>
             </div>
@@ -100,7 +109,7 @@
             <h3>Word Details</h3>
                 <a href="#" class="ui-btn ui-btn-inline ui-corner-all ui-shadow ui-btn-inline ui-btn-a ui-btn-icon-left ui-icon-arrow-l custom-header" data-rel="back" data-transition="flow">Back</a>
           </div>
-          <div role="main" class="ui-content " style="background-color:#f9f9f9;color:#fff">    
+          <div role="main" class="ui-content " style="background-color:#f5f5f5;color:#43515a">    
             <form>
                 <div class="ui-field-contain">
                     <label for="word" class="custom-label">Word:</label>
@@ -108,7 +117,7 @@
                 </div>
                 <div class="ui-field-contain">
                     <label for="part_of_speech" class="custom-label">Part of Speech:</label>
-                    <select name="part_of_speech" id="part_of_speech"  readonly>
+                    <select name="part_of_speech" id="part_of_speech"  readonly >
                         <option value="Noun">Noun</option>
                         <option value="Verb">Verb</option>
                         <option value="Adjective">Adjective</option>
@@ -125,9 +134,12 @@
                 </div>
               </form>
             </div>
-        </div>        
+        </div>    
+        
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        
+        
     </body>
 </html>
